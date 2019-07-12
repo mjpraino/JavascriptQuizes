@@ -8,23 +8,18 @@ var checkBalance = false;
 var isActive = true;
 
 // your code goes here
-if (checkBalance){
-    if (isActive === true && balance > 0) {
-        console.log("Your balance is " + "$" + balance.toFixed(2) + ".");
-    }
-
-    else if (isActive === false) {
-        console.log("Your account is no longer active.");
-    }
-
-    else if (isActive === true && balance === 0) {
-        console.log("Your account is empty.");
-    }
-
-    else if (isActive === true && balance < 0) {
-        console.log("Your balance is negative. Please contact the bank.");
-}
- else {
-    console.log("Thank you, have a nice day.");
+ if (!checkBalance){
+ 		console.log("Thanks you. Have a nice day!");
+ 	}
+ else if (isActive && balance > 0) {
+ 	console.log("Your balance is $" + balance.toFixed(2) + ".");
  }
-}
+ else if (!isActive) {
+ 	console.log("Your account is no longer active.");
+ }
+ else if (isActive  && balance === 0) {
+ 	console.log("Your account is empty.");
+ }
+ else if (isActive && balance !== 0) {
+ 	console.log("Your balance is negative. Please contact your bank.");
+ }
